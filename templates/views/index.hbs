@@ -1,0 +1,23 @@
+{{>header}}
+<main class="container mt-5 ">
+  <div class="p-5 rounded">
+    <div class="row">
+    {{#each articles}}
+      <div class="card mx-auto mb-2" style="width: 18rem;">
+        <a href="{{url}}" target="_blank">
+        {{#if urlToImage}}
+        <img src="{{urlToImage}}" class="card-img-top" alt="{{title}}">
+        {{else}}
+        <img src="https://icon-library.com/images/no-photo-available-icon/no-photo-available-icon-8.jpg" class="card-img-top" alt="{{title}}">
+        {{/if}}
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text dimmed">{{description}}</p>
+        </div>
+        </a>
+      </div>
+    {{/each}}
+    </div>
+  </div>
+</main>
+{{>footer}}
